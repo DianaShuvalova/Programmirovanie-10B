@@ -8,8 +8,10 @@ def deliteli(n: int) -> list:
     return sorted(lst)[::-1]
 
 
-a = int(input())
-b = int(input())
+while True:
+    a, b = input(), input()
+    if a.isdigit() and b.isdigit():
+        a, b = int(a), int(b)
 for i in range(a, b + 1):
     if len(deliteli(i)) == 4:
         print(i)
